@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ing.controller.AuthController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="0.0" prefWidth="0.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="600.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="132.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="181.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox blendMode="DARKEN" prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@style1.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <HBox prefHeight="39.0" prefWidth="470.0" spacing="85.0">
+               <children>
+                  <Label text="Identifiant" textFill="#e4560f">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="txtIdent" promptText="Identifiant unique" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="120.0" right="10.0" top="90.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets top="90.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox spacing="65.0">
+               <children>
+                  <Label text="Mot de passe" textFill="#e4560f">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="txtfield" promptText="password" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="120.0" right="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox spacing="100.0">
+               <children>
+                  <Label text="Profile" textFill="#e4560f">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="profileCombo" prefWidth="100.0" promptText="Profile">
+                     <items>
+                     <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Etudiant" />
+                     <String fx:value="Enseignant" />
+                     <String fx:value="Responsable" />
+                     
+                     </FXCollections>
+                     </items>
+                        </ComboBox>
+                  
+               </children>
+               <VBox.margin>
+                  <Insets left="110.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Region prefHeight="37.0" prefWidth="339.0" />
+                  <Button fx:id="Conectbutton" defaultButton="true" mnemonicParsing="false" onAction="#connect" stylesheets="@style1.css" text="Connecter" textFill="#251e22">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label fx:id="lblerreur" alignment="CENTER" prefHeight="17.0" prefWidth="368.0" text="compte inexistant" textFill="#f20d0d" visible="false">
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
